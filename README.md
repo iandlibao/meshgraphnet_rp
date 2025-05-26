@@ -1,7 +1,7 @@
 # MeshGraphNetRP: Improving Generalization of GNN-based Cloth Simulation
 
-Paper: https://dl.acm.org/doi/10.1145/3623264.3624441
-Project: https://lava.kaist.ac.kr/?page_id=7246
+- Paper: https://dl.acm.org/doi/10.1145/3623264.3624441
+- Project: https://lava.kaist.ac.kr/?page_id=7246
 
 ## File Locations
 
