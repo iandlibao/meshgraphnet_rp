@@ -1,0 +1,81 @@
+{  
+    "input_data_folders": null,
+
+
+    "full_data_version": "v2",
+    "local_preprocessing": true,
+
+
+
+    "model_last_run_dir": null,
+    "epoch_checkpoint": -1, //[epoch number i.e. 200, -1 -> checkpoint], will be read only when model_last_run_dir is not None
+    "is_save_output_on": false,
+
+    ///---------Features-----------///
+    "use_fext": true,
+    "use_ke": true,
+    "use_ke_version": 1,
+
+    "mesh_pos_mode": "3d",
+    "has_sf_ratio_2": true,
+    "with_theta": true,
+    "theta_mode": "signed", //signed or unsigned
+
+    "with_rnn_encoder": 10,
+    ///--------------------------////  
+
+
+
+    "loss": {
+        "accel": {
+            "weight": 1,
+            "norm": null
+        },
+        "rel_pos": {
+            "weight": 30,
+            "norm": "v3"
+        },
+        "edge_length": {
+            "weight": 30,
+            "norm": "v3"
+        },
+        "ke_fixed": {
+            "weight": 1,
+            "norm": "v3"
+        },
+        "theta": {
+            "weight": 0.5,
+            "norm": "v3"
+        }
+    },
+
+        //loss normalizer data
+        //v1, v2, v3
+        //None - normalize by frame (old version)
+        //v1 - normalize the pred (accumulate) , normalize the tar (not accumulate)
+        //v2 - normalize the pred (accumulate), normalize the tar (accumulate)
+        //v3 - normalize the pred (not accumulate), normalize the tar (accumulate)
+
+
+        
+    "epochs": 1200,
+    "val_every_epoch": 10,
+    "save_epoch": 25,
+    
+    "schedule_sampling": {
+        "supervised_epochs": 75,
+        "regression_epochs": 900,
+        "max_regress_count": 30,
+        "p_mode": "sup_dec_reg", //[sup_dec_reg, sup_reg_dec]
+        "low_p_thresh": 0.0 //the lowest p possible
+    },
+
+
+    "runtime": {
+        "output_folder": "final_model",
+        "output_number": "2",
+        "epoch_number": 800,
+        "epoch_last_checkpoint": 900
+    }
+
+}

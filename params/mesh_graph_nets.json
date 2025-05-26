@@ -1,0 +1,51 @@
+{
+    
+    "input_data_folders": null,
+
+    "full_data_version": "v2",
+    "local_preprocessing": true,
+
+    
+    "epochs": 800,
+
+    "model_last_run_dir": null,
+    "epoch_checkpoint": -1, //[epoch number i.e. 200, -1 -> checkpoint], will be read only when model_last_run_dir is not None
+    "is_save_output_on": false,
+
+
+    "loss": {
+        "accel": {
+            "weight": 1,
+            "norm": null
+        }
+    },
+
+        //loss normalizer data
+        //v1, v2, v3
+        //None - normalize by frame (old version)
+        //v1 - normalize the pred (accumulate) , normalize the tar (not accumulate)
+        //v2 - normalize the pred (accumulate), normalize the tar (accumulate)
+        //v3 - normalize the pred (not accumulate), normalize the tar (accumulate)
+
+    
+    "sample_start_point": 0,
+    "val_every_epoch": 25,
+    "save_epoch": 50,
+    
+    "schedule_sampling": {
+        "supervised_epochs": 800,
+        "regression_epochs": 0,
+        "max_regress_count": 30,
+        "p_mode": "sup_dec_reg", //[sup_dec_reg, sup_reg_dec]
+        "low_p_thresh": 0.0 //the lowest p possible
+    },
+
+    "runtime": {
+        
+        "output_folder": "mesh_graph_nets",
+        "output_number": "2",
+        "epoch_last_checkpoint": 800
+        
+    }
+
+}
