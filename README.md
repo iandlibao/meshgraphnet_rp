@@ -1,9 +1,13 @@
-# meshgraphnet_rp_shared
+# MeshGraphNetRP: Improving Generalization of GNN-based Cloth Simulation
+
+Paper: https://dl.acm.org/doi/10.1145/3623264.3624441
+Project: https://lava.kaist.ac.kr/?page_id=7246
 
 ## File Locations
 
 ### input
 
+- download here: https://kaist.gov-dooray.com/share/drive-files/kkmh2qu2awzo.4fpYw3WzRKqYVxbJtkWNYg
 - contains the gt_data
 - gt_data folder includes the data gathered from Arcsim, it includes the training dataset as well as test dataset
 - unity_demo includes different data for the arbitrary mode (refer to Runtime code). It includes the data of different unseen topologies
@@ -11,6 +15,7 @@
 
 ### output
 
+- download here: https://kaist.gov-dooray.com/share/drive-files/kkmh2qu2awzo.B0z0QN1PRZmbquL6csUVhw
 - contains the basic_cloth, npy_results, and renders
 - basic_cloth folder has the saved trained models of (1) final RNN-10 model (2) MLP encoder model and (3) original MeshGraphNets model
 - npy_results contains the runtime results saved as npy. These npy files would be the input for the rendering
