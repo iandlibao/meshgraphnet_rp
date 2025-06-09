@@ -80,3 +80,7 @@
 ## Other
 
 - please refer to environment.yml to see the different libraries used for the python environment
+
+## Acknowledgments
+- This repository contains pieces of code from the following repository:
+- [PyTorch version of Learning Mesh-Based Simulation with Graph Networks (ICLR 2021)](https://github.com/wwMark/meshgraphnets/tree/main)
